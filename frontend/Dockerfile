@@ -1,6 +1,4 @@
-# Build l'application React
-
-FROM node:14-alpine
+FROM node:14-alpine as build
 
 WORKDIR /app
 
@@ -9,22 +7,17 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY package-lock.json ./
 
-
-
-
 RUN npm install --silent
 
-COPY src/components/PasswordForm.js ./src/components/
-COPY src/components/PasswordManager.js ./src/components/
-COPY src/components/PasswordTable.js ./src/components/
-COPY src/App.js ./src/
-COPY src/index.js ./src/
+COPY src/ ./src/
+# COPY src/App.js ./src/
+# COPY src/index.js ./src/
+COPY public/ ./public/
 
-#
+# Build the application
 RUN npm run build
 
-# Configuration de NGINX
-
+# Configure NGINX
 FROM nginx:alpine
 
 COPY --from=build /app/build /usr/share/nginx/html
