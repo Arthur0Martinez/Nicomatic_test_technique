@@ -44,6 +44,7 @@ Ajouter, modifier et supprimer vos mots de passe via l'interface utilisateur.
 
 ## Ce que j'aurais ajouté avec plus de temps
 
+- Regler le probleme de recuperation des mots de passe a la base de donne.
 - Des commentaires plus précis dans mon code.
 - L'ajout d'un mot de passe créé automatiquement.
 - La création d'utilisateurs qui auraient chacun leurs mots de passe précis.
