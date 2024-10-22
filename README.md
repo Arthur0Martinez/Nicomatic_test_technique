@@ -2,7 +2,7 @@
 
 Votre gestionnaire de mots de passe privé, sécurisé et à l'écoute de vos besoins !
 
-NB : Les commentaires dans le code sont en français, ne connaissant pas vos conventions d'écriture.
+NB : Il manque le lien entre le front et le back. La base de donne ne permet ni de recuperer ni de creer des mots de passes.
 
 ## À propos
 
