@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PasswordForm from './PasswordForm';
 import PasswordTable from './PasswordTable';
+import './PasswordManager.css'
 
 const PasswordManager = () => {
   const [passwords, setPasswords] = useState([]);
@@ -38,8 +39,9 @@ const PasswordManager = () => {
   };
 
   return (
-    <div>
-      <h1>Gestionnaire de Mots de Passe</h1>
+    <div className="container">
+      <h1>Saffy</h1>
+      <h2>Ton gestionnaire de mot de passe sécurisé !</h2>
       <PasswordForm onSubmit={addPassword} />
       <PasswordTable passwords={passwords} onDelete={deletePassword} />
     </div>

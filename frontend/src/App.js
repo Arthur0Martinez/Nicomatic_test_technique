@@ -1,5 +1,6 @@
 import React from 'react';
 import PasswordManager from './components/PasswordManager';
+import './App.css';
 
 function App() {
   return (
