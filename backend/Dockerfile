@@ -19,6 +19,8 @@ COPY src/controllers/passwordController.js ./src/controllers/
 COPY src/models/password.js ./src/models/
 COPY src/routes/passwords.js ./src/routes/
 
+RUN npm install -g sequelize-cli
+
 EXPOSE 3000
 
 CMD ["npm", "start"]

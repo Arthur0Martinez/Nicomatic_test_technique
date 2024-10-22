@@ -1,11 +1,10 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('db', 'saffy', 'saffy', {
+const sequelize = new Sequelize('db', 'db', 'db', {
   host: 'db',
   dialect: 'postgres',
 });
 
-// Tester la connexion
 sequelize.authenticate()
   .then(() => {
     console.log('Connexion à la base de données réussie.');
