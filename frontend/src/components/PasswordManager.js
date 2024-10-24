@@ -13,7 +13,7 @@ const PasswordManager = () => {
 
   const fetchPasswords = async () => {
     try {
-      const response = await axios.get('/api/passwords');
+      const response = await axios.get('http://localhost:3001/api/passwords');
       setPasswords(response.data);
     } catch (error) {
       console.error('Error fetching passwords:', error);
@@ -22,7 +22,7 @@ const PasswordManager = () => {
 
   const addPassword = async (newPassword) => {
     try {
-      const response = await axios.post('/api/passwords', newPassword);
+      const response = await axios.post('http://localhost:3001/api/passwords', newPassword);
       setPasswords([...passwords, response.data]);
     } catch (error) {
       console.error('Error adding password:', error);
@@ -31,7 +31,7 @@ const PasswordManager = () => {
 
   const deletePassword = async (id) => {
     try {
-      await axios.delete(`/api/passwords/${id}`);
+      await axios.delete(`http://localhost:3001/api/passwords/${id}`);
       setPasswords(passwords.filter((password) => password.id !== id));
     } catch (error) {
       console.error('Error deleting password:', error);
